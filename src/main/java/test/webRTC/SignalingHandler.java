@@ -49,10 +49,6 @@ public class SignalingHandler extends TextWebSocketHandler {
             }
         }
     }
-    // 현재 문제 => s.getId와 session.getId가 같음 -> send를 못하고 있음 => 프론트에서 찍혀야하는 로그들이 안찍힘
-    // => 최종적으로 수신자 쪽에서 비디오 출력이 안됨 (= 시청이 안됨)
-    // && !s.getId().equals(session.getId()) 이거 제외시켜서 임의로 일단 해결 완료
-    // 근데 두번째 이슈 => 비디오 출력 (시청)이 안됨
 
     // 웹소켓 연결이 닫혔을 때 호출
     @Override
